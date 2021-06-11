@@ -565,7 +565,7 @@ div.Section2
 </head>
 
 
-<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESBUDAPEST.play(); SLIDESCNY2020.play();">
+<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESBUDAPEST.play(); SLIDESCNY2020.play(); SLIDESOuting2021.play();">
 
 <div id="MainNewContent1">
     <table id="table2" border="1" bordercolor="#D6D6D6" cellpadding="0" cellspacing="0" height="979" style="border-collapse: collapse" width="1256">
@@ -1703,6 +1703,37 @@ SLIDESCNY2020.post_update_hook = function() { fadeinCNY2020(0.04); }
 
 
 // end of CNY2020 
+	
+// do slides show onOuting 2021
+    SLIDESOuting2021.image = document.images.SLIDESIMG2021;
+
+    var fadein_opacityOuting2021 = 0.04;
+
+    var fadein_imgOuting2021 = SLIDESOuting2021.image;
+
+    function fadeinOuting2021(opacity) {
+
+        if (typeof opacity != 'undefined') { fadein_opacityOuting2021 = opacity; }
+
+        if (fadein_opacityOuting2021 < 0.99 && fadein_imgOuting2021 && fadein_imgOuting2021.style &&
+
+            typeof fadein_imgOuting2021.style.MozOpacity != 'undefined') {
+
+            fadein_opacityOuting2021 += .05;
+
+            fadein_imgOuting2021.style.MozOpacity = fadein_opacityOuting2021;
+
+            setTimeout("fadeinOuting2021()", 100);
+
+        }
+
+    }
+
+    // Tell the slideshow to call our function whenever the slide is changed
+    SLIDESOuting2021.post_update_hook = function () { fadeinOuting2021(0.04); }
+
+
+// end of Outing 2021
 
 
 // do slides show on Budapest
