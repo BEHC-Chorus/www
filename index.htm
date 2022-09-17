@@ -39,6 +39,9 @@ div.Section2
     .auto-style3 {
         font-size: small;
     }
+    .auto-style4 {
+        height: 27px;
+    }
 -->
 
 </style>
@@ -211,8 +214,52 @@ div.Section2
     s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
     s.text = "Performance";
 
-
     // end of Budapest
+
+    // Slide show for 2022 YMJ
+    SLIDESOuting2022 = new slideshow("SLIDESOuting2022");
+    SLIDESOuting2022.timeout = 5000;
+
+    SLIDESOuting2022.add_slide(s = new slide('images/2022YMJ/01.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESOuting2022.add_slide(s = new slide('images/2022YMJ/02.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESOuting2022.add_slide(s = new slide('images/2022YMJ/03.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESOuting2022.add_slide(s = new slide('images/2022YMJ/04.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESOuting2022.add_slide(s = new slide('images/2022YMJ/05.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESOuting2022.add_slide(s = new slide('images/2022YMJ/06.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESOuting2022.add_slide(s = new slide('images/2022YMJ/07.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESOuting2022.add_slide(s = new slide('images/2022YMJ/08.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESOuting2022.add_slide(s = new slide('images/2022YMJ/09.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESOuting2022.add_slide(s = new slide('images/2022YMJ/10.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+    // End of 2022 YMJ
 
     // Slide show for 2021 Outing
     SLIDESOuting2021 = new slideshow("SLIDESOuting2021");
@@ -574,7 +621,7 @@ div.Section2
 </head>
 
 
-<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESBUDAPEST.play(); SLIDESCNY2020.play(); SLIDESOuting2021.play();">
+<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESCNY2020.play(); SLIDESOuting2021.play(); SLIDESOuting2022.play();">
 
 <div id="MainNewContent1">
     <table id="table2" border="1" bordercolor="#D6D6D6" cellpadding="0" cellspacing="0" height="979" style="border-collapse: collapse" width="1256">
@@ -774,6 +821,61 @@ div.Section2
             </td>
             <td valign="top" width="845">
                 <table id="table5" border="0" cellspacing="3" width="860">
+		    						<tr>
+
+							<td colspan="3">&nbsp;</td>
+
+						</tr>
+
+		    						<tr>
+
+							<td colspan="3" class="auto-style4"><b><font size="4">2022 Asian American Day Festival&nbsp; <span lang="zh-cn">波士顿亚美节</span></font></b></td>
+
+						</tr>
+
+		    						<tr>
+
+							<td style="font-size: 12px;" colspan="3">September 10， 2022</td>
+
+						</tr>
+
+		    						<tr>
+
+							<td colspan="3">&nbsp;</td>
+
+						</tr>
+
+		    						<tr>
+
+							<td colspan="3"> <a href="https://youtu.be/rnDyjNvado0" target="_blank">Performance Video 演出录像</a></td>
+
+						</tr>
+
+		    						<tr>
+
+							<td colspan="3">&nbsp;</td>
+
+						</tr>
+
+		    						<tr>
+
+							<td colspan="3"><img border="0" name="SLIDESIMG2022" src="images/2022YMJ/01.png" style="border: 2px ridge #008020" width="720" height="500"></td>
+
+						</tr>
+
+		    						<tr>
+
+							<td colspan="3">&nbsp;</td>
+
+						</tr>
+
+		    						<tr>
+
+							<td colspan="3" background="images/fall-line09.gif" height="32">
+							    &nbsp;</td>
+
+						</tr>
+
 		    						<tr>
 
 							<td colspan="3">&nbsp;</td>
@@ -1800,10 +1902,27 @@ div.Section2
 
         SLIDESCNY2020.post_update_hook = function () { fadeinCNY2020(0.04); }
 
-
         // end of CNY2020 
 
-        // do slides show onOuting 2021
+        // do slide show on 2022 YMJ
+        SLIDESOuting2022.image = document.images.SLIDESIMG2022;
+        var fadein_opacityOuting2022 = 0.04;
+        var fadein_imgOuting2022 = SLIDESOuting2022.image;
+        function fadeinOuting2022(opacity) {
+            if (typeof opacity != 'undefined') { fadein_opacityOuting2022 = opacity; }
+            if (fadein_opacityOuting2022 < 0.99 && fadein_imgOuting2022 && fadein_imgOuting2022.style &&
+                typeof fadein_imgOuting2022.style.MozOpacity != 'undefined') {
+                fadein_opacityOuting2022 += .05;
+                fadein_imgOuting2022.style.MozOpacity = fadein_opacityOuting2022;
+                setTimeout("fadeinOuting2022()", 100);
+            }
+
+        }
+        // Tell the slideshow to call our function whenever the slide is changed
+        SLIDESOuting2022.post_update_hook = function () { fadeinOuting2022(0.04); }
+        // end of slide show 2022 YMJ
+
+        // do slides show on Outing 2021
         SLIDESOuting2021.image = document.images.SLIDESIMG2021;
 
         var fadein_opacityOuting2021 = 0.04;
