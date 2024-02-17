@@ -216,6 +216,26 @@ div.Section2
 
     // end of Budapest
 
+    // Slide show for 2024 NewBridge on Charles
+    SLIDESNBC2024 = new slideshow("SLIDESNBC2024");
+    SLIDESNBC2024.timeout = 5000;
+
+    SLIDESNBC2024.add_slide(s = new slide('images/2024/NewBridge3.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESNBC2024.add_slide(s = new slide('images/2024/NewBridge4.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESNBC2024.add_slide(s = new slide('images/2024/NewBridge6.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESNBC2024.add_slide(s = new slide('images/2024/NewBridge1.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
     // Slide show for 2022 YMJ
     SLIDESOuting2022 = new slideshow("SLIDESOuting2022");
     SLIDESOuting2022.timeout = 5000;
@@ -621,7 +641,7 @@ div.Section2
 </head>
 
 
-<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESCNY2020.play(); SLIDESOuting2021.play(); SLIDESOuting2022.play();">
+<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESCNY2020.play(); SLIDESNBC2024.play(); SLIDESOuting2022.play();">
 
 <div id="MainNewContent1">
     <table id="table2" border="1" bordercolor="#D6D6D6" cellpadding="0" cellspacing="0" height="979" style="border-collapse: collapse" width="1256">
@@ -822,11 +842,7 @@ div.Section2
             </td>
             <td valign="top" width="845">
                 <table id="table5" border="0" cellspacing="3" width="860">
-		    						<tr>
-
-							<td colspan="3">&nbsp;</td>
-
-						</tr>
+		    						
 
 		    						<tr>
 
@@ -2417,6 +2433,25 @@ div.Section2
         // Tell the slideshow to call our function whenever the slide is changed
         SLIDESOuting2022.post_update_hook = function () { fadeinOuting2022(0.04); }
         // end of slide show 2022 YMJ
+
+        // do slide show on 2024 NewBridge on Charles
+        
+        SLIDESNBC2024.image = document.images.SLIDESIMG2024;
+        var fadein_opacityNBC2024 = 0.04;
+        var fadein_imgNBC2024 = SLIDESNBC2024.image;
+        function fadeinOuting2024(opacity) {
+            if (typeof opacity != 'undefined') { fadein_opacityNBC2024 = opacity; }
+            if (fadein_opacityNBC2024 < 0.99 && fadein_imgNBC2024 && fadein_imgNBC2024.style &&
+                typeof fadein_imgNBC2024.style.MozOpacity != 'undefined') {
+                fadein_opacityNBC2024 += .05;
+                fadein_imgNBC2024.style.MozOpacity = fadein_opacityNBCg2024;
+                setTimeout("fadeinOuting2024()", 100);
+            }
+
+        }
+        // Tell the slideshow to call our function whenever the slide is changed
+        SLIDESNBC2024.post_update_hook = function () { fadeinOuting2024(0.04); }
+        // end of slide show 2024 NewBridge on Charle
 
         // do slides show on Outing 2021
         SLIDESOuting2021.image = document.images.SLIDESIMG2021;
