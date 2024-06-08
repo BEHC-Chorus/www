@@ -220,6 +220,61 @@ div.Section2
 
     // end of Budapest
 
+    // Slide show for 2024 Italy Tuscany
+    SLIDESITA2024 = new slideshow("SLIDESITA2024");
+    SLIDESITA2024.timeout = 5000;
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/01.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/02.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/03.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/04.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/05.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/06.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/07.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/08.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/09.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/10.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/11.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESITA2024.add_slide(s = new slide('images/Italy2024/12.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    // End of Slide show for 2024 Italy Tuscany
+
+
     // Slide show for 2024 NewBridge on Charles
     SLIDESNBC2024 = new slideshow("SLIDESNBC2024");
     SLIDESNBC2024.timeout = 5000;
@@ -649,7 +704,7 @@ div.Section2
 </head>
 
 
-<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESCNY2020.play(); SLIDESNBC2024.play(); SLIDESOuting2022.play();">
+<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESCNY2020.play(); SLIDESNBC2024.play(); SLIDESITA2024.play();">
 
 <div id="MainNewContent1">
     <table id="table2" border="1" bordercolor="#D6D6D6" cellpadding="0" cellspacing="0" height="979" style="border-collapse: collapse" width="1256">
@@ -854,7 +909,52 @@ div.Section2
 
 		    						<tr>
 
-							<td colspan="3" class="auto-style4"></td>
+							<td colspan="3" class="auto-style4"><font size="4"><b>International Choir Festival of Tuscany</b></font></td>
+
+						</tr>
+
+
+		    						<tr>
+
+							<td colspan="3" class="auto-style4">May 21 - 25, 2024</td>
+
+						</tr>
+
+
+		    						<tr>
+
+							<td colspan="3" class="auto-style4">&nbsp;</td>
+
+						</tr>
+
+
+		    						<tr>
+
+							<td colspan="3" class="auto-style4">&nbsp;</td>
+
+						</tr>
+
+
+		    						<tr>
+
+							<td colspan="3" class="auto-style4"><img border="0" name="SLIDESIMGITA2024" src="images/Italy2024/01.png" style="border: 2px ridge #993333" width="720" height="480"></td>
+
+						</tr>
+
+
+		    						<tr>
+
+							<td colspan="3" class="auto-style4"><tr>
+
+							<td colspan="3" background="images/fall-line09.gif" height="32">
+							    &nbsp;</td>
+
+						</tr>
+
+
+		    						<tr>
+
+							<td colspan="3" class="auto-style4">&nbsp;</td>
 
 						</tr>
 
@@ -2535,6 +2635,25 @@ div.Section2
         // Tell the slideshow to call our function whenever the slide is changed
         SLIDESNBC2024.post_update_hook = function () { fadeinOuting2024(0.04); }
         // end of slide show 2024 NewBridge on Charle
+
+        // do slide show on 2024 Italy Tuscany
+
+        SLIDESITA2024.image = document.images.SLIDESIMGITA2024;
+        var fadein_opacityITA2024 = 0.04;
+        var fadein_imgITA2024 = SLIDESITA2024.image;
+        function fadeinITA2024(opacity) {
+            if (typeof opacity != 'undefined') { fadein_opacityITA2024 = opacity; }
+            if (fadein_opacityITA2024 < 0.99 && fadein_imgITA2024 && fadein_imgITA2024.style &&
+                typeof fadein_imgITA2024.style.MozOpacity != 'undefined') {
+                fadein_opacityITA2024 += .05;
+                fadein_imgITA2024.style.MozOpacity = fadein_opacityITAg2024;
+                setTimeout("fadeinITA2024()", 100);
+            }
+
+        }
+        // Tell the slideshow to call our function whenever the slide is changed
+        SLIDESITA2024.post_update_hook = function () { fadeinITA2024(0.04); }
+        // end of slide show 2024 Italy Tuscany
 
         // do slides show on Outing 2021
         SLIDESOuting2021.image = document.images.SLIDESIMG2021;
