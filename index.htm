@@ -2681,20 +2681,20 @@ div.Section2
         // end of slide show 2024 NewBridge on Charle
 
         // do slide show on 2024 Asian American Day Festival
-        SLIDESAAD2024.image = document.images.SLIDESIMGAAD2024;
-        var fadein_opacityAAD2024 = 0.04;
-        var fadein_imgAAD2024 = SLIDESAAD2024.image;
-        function fadeinAAD2024(opacity) {
-            if (typeof opacity != 'undefined') { fadein_opacityAAD2024 = opacity; }
-            if (fadein_opacityAAD2024 < 0.99 && fadein_imgAAD2024 && fadein_imgAAD2024.style &&
-                typeof fadein_imgAAD2024.style.MozOpacity != 'undefined') {
-                fadein_opacityAAD2024 += .05;
-                fadein_imgAAD2024.style.MozOpacity = fadein_opacityAADg2024;
-                setTimeout("fadeinAAD2024()", 100);
-            }
+        //SLIDESAAD2024.image = document.images.SLIDESIMGAAD2024;
+        //var fadein_opacityAAD2024 = 0.04;
+        //var fadein_imgAAD2024 = SLIDESAAD2024.image;
+        //function fadeinAAD2024(opacity) {
+        //    if (typeof opacity != 'undefined') { fadein_opacityAAD2024 = opacity; }
+        //    if (fadein_opacityAAD2024 < 0.99 && fadein_imgAAD2024 && fadein_imgAAD2024.style &&
+        //        typeof fadein_imgAAD2024.style.MozOpacity != 'undefined') {
+        //        fadein_opacityAAD2024 += .05;
+        //        fadein_imgAAD2024.style.MozOpacity = fadein_opacityAADg2024;
+        //        setTimeout("fadeinAAD2024()", 100);
+        //    }
 
-        }
-        SLIDESAAD2024.post_update_hook = function () { fadeinAAD2024(0.04); }
+        //}
+        //SLIDESAAD2024.post_update_hook = function () { fadeinAAD2024(0.04); }
         // end of slide show 2024 Asian American Day Festival
 
         // do slide show on 2024 Italy Tuscany
