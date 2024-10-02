@@ -299,6 +299,31 @@ div.Section2
     s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
     s.text = "Performance";
 
+    // Slide show for 2024 Asian American Day Festival
+    SLIDESAAD2024 = new slideshow("SLIDESAAD2024");
+    SLIDESAAD2024.timeout = 5000;
+
+    SLIDESAAD2024.add_slide(s = new slide('images/AsianFestival2024/01.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESAAD2024.add_slide(s = new slide('images/AsianFestival2024/02.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESAAD2024.add_slide(s = new slide('images/AsianFestival2024/03.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESAAD2024.add_slide(s = new slide('images/AsianFestival2024/04.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESAAD2024.add_slide(s = new slide('images/AsianFestival2024/05.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+    
+
      // Slide show for 2022 YMJ
     SLIDESOuting2022 = new slideshow("SLIDESOuting2022");
     SLIDESOuting2022.timeout = 5000;
@@ -704,7 +729,7 @@ div.Section2
 </head>
 
 
-<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESCNY2020.play(); SLIDESNBC2024.play(); SLIDESITA2024.play();">
+<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESCNY2020.play(); SLIDESNBC2024.play(); SLIDESITA2024.play();SLIDESAAD2024.play()">
 
 <div id="MainNewContent1">
     <table id="table2" border="1" bordercolor="#D6D6D6" cellpadding="0" cellspacing="0" height="979" style="border-collapse: collapse" width="1256">
@@ -2681,20 +2706,20 @@ div.Section2
         // end of slide show 2024 NewBridge on Charle
 
         // do slide show on 2024 Asian American Day Festival
-        //SLIDESAAD2024.image = document.images.SLIDESIMGAAD2024;
-        //var fadein_opacityAAD2024 = 0.04;
-        //var fadein_imgAAD2024 = SLIDESAAD2024.image;
-        //function fadeinAAD2024(opacity) {
-        //    if (typeof opacity != 'undefined') { fadein_opacityAAD2024 = opacity; }
-        //    if (fadein_opacityAAD2024 < 0.99 && fadein_imgAAD2024 && fadein_imgAAD2024.style &&
-        //        typeof fadein_imgAAD2024.style.MozOpacity != 'undefined') {
-        //        fadein_opacityAAD2024 += .05;
-        //        fadein_imgAAD2024.style.MozOpacity = fadein_opacityAADg2024;
-        //        setTimeout("fadeinAAD2024()", 100);
-        //    }
+        SLIDESAAD2024.image = document.images.SLIDESIMGAAD2024;
+        var fadein_opacityAAD2024 = 0.04;
+        var fadein_imgAAD2024 = SLIDESAAD2024.image;
+        function fadeinAAD2024(opacity) {
+            if (typeof opacity != 'undefined') { fadein_opacityAAD2024 = opacity; }
+            if (fadein_opacityAAD2024 < 0.99 && fadein_imgAAD2024 && fadein_imgAAD2024.style &&
+                typeof fadein_imgAAD2024.style.MozOpacity != 'undefined') {
+                fadein_opacityAAD2024 += .05;
+                fadein_imgAAD2024.style.MozOpacity = fadein_opacityAADg2024;
+                setTimeout("fadeinAAD2024()", 100);
+            }
 
-        //}
-        //SLIDESAAD2024.post_update_hook = function () { fadeinAAD2024(0.04); }
+        }
+        SLIDESAAD2024.post_update_hook = function () { fadeinAAD2024(0.04); }
         // end of slide show 2024 Asian American Day Festival
 
         // do slide show on 2024 Italy Tuscany
