@@ -299,6 +299,18 @@ div.Section2
     s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
     s.text = "Performance";
 
+    // Slide show for 2025 Newton Race
+    SLIDESNRACE2025 = new slideshow("SLIDESNRACE2025");
+    SLIDESNRACE2025.timeout = 5000;
+
+    SLIDESNRACE2025.add_slide(s = new slide('images/2025/Race2501.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
+    SLIDESNRACE2025.add_slide(s = new slide('images/2025/Race2502.png'));
+    s.filter = 'progid:DXImageTransform.Microsoft.Fade()';
+    s.text = "Performance";
+
     // Slide show for 2024 Asian American Day Festival
     SLIDESAAD2024 = new slideshow("SLIDESAAD2024");
     SLIDESAAD2024.timeout = 5000;
@@ -729,7 +741,7 @@ div.Section2
 </head>
 
 
-<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESCNY2020.play(); SLIDESNBC2024.play(); SLIDESITA2024.play();SLIDESAAD2024.play()">
+<body bgcolor="#E6EEEE" style="text-align: center; font-family:Verdana; font-size:10px" onLoad="SLIDESNRACE2025.play(); SLIDESNBC2024.play(); SLIDESITA2024.play();SLIDESAAD2024.play()">
 
 <div id="MainNewContent1">
     <table id="table2" border="1" bordercolor="#D6D6D6" cellpadding="0" cellspacing="0" height="979" style="border-collapse: collapse" width="1256">
@@ -955,7 +967,7 @@ div.Section2
 
 		    						<tr>
 
-							<td colspan="3" class="auto-style4"><img border="0" style="border: 2px ridge #993333" src="images/2025/Race2501.png" width="720"></td>
+							<td colspan="3" class="auto-style4"><img name="SLIDESIMGRACE2025" border="0" style="border: 2px ridge #993333" src="images/2025/Race2501.png" width="720"></td>
 
 						</tr>
 
@@ -2901,6 +2913,23 @@ div.Section2
         // Tell the slideshow to call our function whenever the slide is changed
         SLIDESNBC2024.post_update_hook = function () { fadeinOuting2024(0.04); }
         // end of slide show 2024 NewBridge on Charle
+
+        // do slide show on 2025 Newton Race
+        SLIDESNRACE2025.image = document.images.SLIDESIMGRACE2025;
+        var fadein_opacityNRACE2025 = 0.04;
+        var fadein_imgNRACE2025 = SLIDESNRACE2025.image;
+        function fadeinNRACE2025(opacity) {
+            if (typeof opacity != 'undefined') { fadein_opacityNRACE2025 = opacity; }
+            if (fadein_opacityNRACE2025 < 0.99 && fadein_imgNRACE2025 && fadein_imgNRACE2025.style &&
+                typeof fadein_imgNRACE2025.style.MozOpacity != 'undefined') {
+                fadein_opacityNRACE2025 += .05;
+                fadein_imgNRACE2025.style.MozOpacity = fadein_opacityAADg2024;
+                setTimeout("fadeinNRACE2025()", 100);
+            }
+
+        }
+        SLIDESNRACE2025.post_update_hook = function () { fadeinNRACE2025(0.04); }
+        // end of slide show on 2025 Newton Race
 
         // do slide show on 2024 Asian American Day Festival
         SLIDESAAD2024.image = document.images.SLIDESIMGAAD2024;
